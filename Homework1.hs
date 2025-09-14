@@ -1,70 +1,48 @@
 module Homework1 where
 
-    --1 feladat
-    intExpr1 :: Int 
-    intExpr1 = 1
+--1 feladat Kifejezések
+intExpr1 :: Int
+intExpr1 = 8126
 
-    intExpr2 :: Int
-    intExpr2 = 2
+intExpr2 :: Int
+intExpr2 = 2873
 
-    intExpr3 ::Int
-    intExpr3 = 3
+intExpr3 :: Int
+intExpr3 = 9612
 
-    charExpr1 :: Char
-    charExpr1 = 'A'
+boolExpr1 :: Bool
+boolExpr1 = True
 
-    charExpr2 :: Char
-    charExpr2 = 'B'
+boolExpr2 :: Bool
+boolExpr2 = False
 
-    charExpr3 :: Char
-    charExpr3 = 'x'
+boolExpr3 :: Bool
+boolExpr3 = True
 
-    boolExpr1 :: Bool 
-    boolExpr1 = True
+--2.feladat Virágültetés
 
-    boolExpr2 :: Bool 
-    boolExpr2 = False
+canPlantAll :: Int -> Bool
+canPlantAll x = x `div` 13 > 0
 
-    boolExpr3 :: Bool 
-    boolExpr3 = 4 < 2
+remainingSeeds :: Int -> Int
+remainingSeeds x = x `mod` 13
 
-    --2 feladat
-    plantSeed :: Int
-    plantSeed = 183
+--3.feladat Hét
 
-    canPlantAll :: Bool
-    canPlantAll = (plantSeed `mod` 13) == 0
+double :: Int -> Int
+double x = x * 2
 
-    remainingSeeds :: Int
-    remainingSeeds = plantSeed `mod` 13
+inc :: Int -> Int
+inc x = x + 1
 
-    --3 feladat
-    zero :: Int
-    zero = 0
+nulla :: Int
+nulla = 0
 
-    inc :: Int -> Int
-    inc x = x + 1
+seven1 :: Int
+seven1 = inc (double 3)
 
-    double :: Int -> Int
-    double x = x * 2
+seven2 :: Int
+seven2 = inc ( inc (inc ( double 2)))
 
-    seven1 :: Int
-    seven1 = inc (inc (inc (double (double (inc zero)))))
-
-    seven2 :: Int
-    seven2 = inc (inc (inc (inc (inc (double (inc zero))))))
-
-    seven3 :: Int
-    seven3 = inc (inc (inc (inc (inc (inc (inc zero))))))
-
-
-    --4 feladat
-    cmpRem5Rem7 :: Int -> Bool
-    cmpRem5Rem7 x = x `rem` 5 > x `rem` 7
-
-    --5 feladat
-    foo :: Int -> Bool -> Bool
-    foo x y = x > 2 || y == False
-
-    bar :: Bool -> Int -> Bool
-    bar x y = foo y x
+seven3 :: Int
+seven3 = inc (inc (inc (inc (inc (inc (inc(double 0)))))))

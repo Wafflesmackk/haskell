@@ -1,48 +1,26 @@
---Daka Bence Neptun: I5RQFI
 module Homework2 where
 
-    -- 1 feladat
-    isSmallPrime :: Int -> Bool
-    isSmallPrime 2 = True
-    isSmallPrime 3 = True
-    isSmallPrime 5 = True
-    isSmallPrime 7 = True
-    isSmallPrime _ = False
+-- 1 feladat
 
-    -- 2 feladat
-    equivalent :: Bool -> Bool -> Bool
-    equivalent True True = True
-    equivalent False False = True
-    equivalent _ _ = False
+cmpRem5Rem7 :: Int -> Bool
+cmpRem5Rem7 x = x `rem` 5 > x `rem` 7
 
-    --3 feladat
-    implies :: Bool -> Bool -> Bool
-    implies True False = False
-    implies _ _ = True
+--2 feladat
 
-    --4 feladat
-    invertO :: (Int, Int) -> (Int, Int)
-    invertO (x, y) = (-x, -y)
+foo :: Int -> Bool -> Bool
+foo x y = x == 3 || y == True
 
-    --5 feladat
-    isOnNegId :: (Int, Int) -> Bool
-    isOnNegId (x, y) = x == -y
+bar :: Bool -> Int -> Bool 
+bar x y = foo y x
 
-    --6 feladat
-    distance :: (Int, Int) -> (Int, Int) -> Double
-    distance (x, y) (a, b) = sqrt(fromIntegral((a - x)^2 + (b - y)^2))
+-- 4 feladat
+isOnNegId :: Int -> Int -> Bool
+isOnNegId x y = -x - y == 0 
 
-    --7 feladat
-    add :: (Int, Int) -> (Int, Int) -> (Int, Int)
-    add (x, y) (a, b) = ((x * b) + (a * y), y * b)
+--5 feladat
+modulo3 :: Int -> Int
+modulo3 x = x `mod` 3
 
-    --8 feladat
-    multiply :: (Int, Int) -> (Int, Int) -> (Int, Int)
-    multiply (x, y) (a, b) = (x * a, y * b)
-
-    --9 feladat
-    divide :: (Int, Int) -> (Int, Int) -> (Int, Int)
-    divide (x, y) (a, b) = (x * b, y * a)
-
-    g :: (Int, (Double, Bool)) -> Int
-    g (a, b) = a
+--6 feladat
+modulo3div :: Int -> Int -> Int
+modulo3div x y = modulo3(x `div` y)
